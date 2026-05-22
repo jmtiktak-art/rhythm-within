@@ -12,13 +12,18 @@ const t = {
     nav: { course: "Course", workshop: "Workshop", about: "About", lang: "NL" },
     hero: {
       headline: "Find your rhythm again.",
-      sub: "For athletes and perfectionists who are done fighting their body.",
-      body: "As a former track cyclist, I know what it's like to push your body to its limits — and then turn that same force against yourself. This is the way back.",
+      sub: "For athletes recovering from an eating disorder — ready to stop fighting their body.",
+      body: "As a former track cyclist I know what it's like when performance culture turns your body into something to control. Rhythm Within is the way back to yourself.",
       cta: "Get the course →",
+    },
+    problem: {
+      p1: "You've been measured your whole career. Weight, power output, times, rankings.",
+      p2: "At some point the measuring didn't stop when training did.",
+      p3: "That's not weakness. That's what happens when a high-performance mindset meets a body that was always just supposed to win — and nobody talks about it.",
     },
     about: {
       title: "Hi, I'm Janne.",
-      p1: "I raced track cycling at sprint level. I also spent years at war with my body — measuring worth in kilograms and performance, not in how I felt.",
+      p1: "I raced track cycling at sprint level. I also developed an eating disorder — and spent years measuring my worth in kilograms and performance numbers instead of how I actually felt.",
       p2: "Athletes aren't supposed to talk about this. I did anyway. Three years in Asia studying yoga, meditation, and neuroscience later, I built Rhythm Within — for people who know what it means to be strong and quietly struggling at the same time.",
       p3: "I only work with people I'm genuinely behind. If this sounds like you, I think we'll be a good fit.",
       location: "Based between Europe and Southeast Asia. Fully remote.",
@@ -75,13 +80,18 @@ const t = {
     nav: { course: "Cursus", workshop: "Workshop", about: "Over mij", lang: "EN" },
     hero: {
       headline: "Kom terug naar jezelf.",
-      sub: "Voor sporters en perfectionisten die klaar zijn met vechten tegen hun lichaam.",
-      body: "Als voormalig baanwielrenster weet ik hoe het voelt om je lichaam tot het uiterste te drijven — en diezelfde kracht vervolgens tegen jezelf te keren. Dit is de weg terug.",
+      sub: "Voor sporters die herstellen van een eetstoornis — en klaar zijn met vechten tegen hun lichaam.",
+      body: "Als voormalig baanwielrenster weet ik hoe het voelt als prestatiecultuur je lichaam verandert in iets om te controleren. Rhythm Within is de weg terug naar jezelf.",
       cta: "Naar de cursus →",
+    },
+    problem: {
+      p1: "Je hele carrière ben je gemeten. Gewicht, vermogen, tijden, rankings.",
+      p2: "Op een gegeven moment stopte dat meten niet meer wanneer de training stopte.",
+      p3: "Dat is geen zwakte. Dat is wat er gebeurt als een topprestatiementaliteit botst met een lichaam dat altijd gewoon moest winnen — en niemand erover praat.",
     },
     about: {
       title: "Hoi, ik ben Janne.",
-      p1: "Ik deed aan baanwielrennen op sprintniveau. En ik bracht jaren door in oorlog met mijn eigen lichaam — waarde afmeten aan kilo's en prestaties, niet aan hoe ik me voelde.",
+      p1: "Ik deed aan baanwielrennen op sprintniveau. En ik ontwikkelde een eetstoornis — en bracht jaren door met mijn waarde afmeten aan kilo's en prestaties, in plaats van hoe ik me werkelijk voelde.",
       p2: "Sporters praten hier niet over. Ik deed het toch. Na drie jaar in Azië — yoga, meditatie en neurowetenschappen — bouwde ik Rhythm Within: voor mensen die weten hoe het is om sterk te zijn én stil te worstelen.",
       p3: "Ik werk alleen met mensen waarbij ik echt betrokken ben. Als dit klinkt als jij, denk ik dat we goed bij elkaar passen.",
       location: "Tussen Europa en Zuidoost-Azië. Volledig remote.",
@@ -193,6 +203,13 @@ export default function Home() {
         >
           {copy.hero.cta}
         </a>
+      </section>
+
+      {/* Problem */}
+      <section className="px-6 py-24 max-w-2xl mx-auto border-t border-foreground/10">
+        <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-5">{copy.problem.p1}</p>
+        <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-5">{copy.problem.p2}</p>
+        <p className="text-lg md:text-xl leading-relaxed text-foreground/80">{copy.problem.p3}</p>
       </section>
 
       {/* About */}
