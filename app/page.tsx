@@ -208,7 +208,7 @@ export default function Home() {
         </div>
         <div className="rounded-3xl aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-[#e8ddd0] to-[#d4c4b0]">
           <Image
-            src="/media/hero.jpg"
+            src="/media/portrait-2.jpg"
             alt="Rhythm Within"
             fill
             className="object-cover object-top"
