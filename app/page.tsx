@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const TALLY_URL = "https://tally.so/r/wz9qQ1";
 const SUBSTACK_URL = "https://substack.com/@withinrhythm";
@@ -187,22 +188,33 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-2xl mx-auto px-6 py-28 text-center">
-        <h1 className="font-serif text-5xl md:text-6xl leading-[1.05] text-foreground mb-6">
-          {copy.hero.headline}
-        </h1>
-        <p className="text-lg md:text-xl text-foreground/70 mb-4">{copy.hero.sub}</p>
-        <p className="text-base text-foreground/55 leading-relaxed mb-12 max-w-lg mx-auto">
-          {copy.hero.body}
-        </p>
-        <a
-          href={TALLY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-accent text-white text-base px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
-        >
-          {copy.hero.cta}
-        </a>
+      <section className="max-w-5xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 className="font-serif text-5xl md:text-6xl leading-[1.05] text-foreground mb-6">
+            {copy.hero.headline}
+          </h1>
+          <p className="text-lg md:text-xl text-foreground/70 mb-4">{copy.hero.sub}</p>
+          <p className="text-base text-foreground/55 leading-relaxed mb-12">
+            {copy.hero.body}
+          </p>
+          <a
+            href={TALLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-accent text-white text-base px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+          >
+            {copy.hero.cta}
+          </a>
+        </div>
+        <div className="rounded-3xl aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-[#e8ddd0] to-[#d4c4b0]">
+          <Image
+            src="/media/hero.jpg"
+            alt="Rhythm Within"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
       </section>
 
       {/* Problem */}
@@ -213,14 +225,26 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="px-6 py-24 max-w-2xl mx-auto border-t border-foreground/10">
-        <h2 className="font-serif text-3xl md:text-4xl mb-6">{copy.about.title}</h2>
-        <p className="text-lg leading-relaxed text-foreground/80 mb-4">{copy.about.p1}</p>
-        <p className="text-lg leading-relaxed text-foreground/80 mb-4">{copy.about.p2}</p>
-        <p className="font-serif italic text-foreground/55 text-base leading-relaxed mb-6">
-          {copy.about.p3}
-        </p>
-        <p className="text-sm text-foreground/40">{copy.about.location}</p>
+      <section id="about" className="px-6 py-24 max-w-5xl mx-auto border-t border-foreground/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="rounded-3xl aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-[#e8ddd0] to-[#d4c4b0]">
+            <Image
+              src="/media/about.jpg"
+              alt="Janne"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+          <div>
+            <h2 className="font-serif text-3xl md:text-4xl mb-6">{copy.about.title}</h2>
+            <p className="text-lg leading-relaxed text-foreground/80 mb-4">{copy.about.p1}</p>
+            <p className="text-lg leading-relaxed text-foreground/80 mb-4">{copy.about.p2}</p>
+            <p className="font-serif italic text-foreground/55 text-base leading-relaxed mb-6">
+              {copy.about.p3}
+            </p>
+            <p className="text-sm text-foreground/40">{copy.about.location}</p>
+          </div>
+        </div>
       </section>
 
       {/* Course */}
